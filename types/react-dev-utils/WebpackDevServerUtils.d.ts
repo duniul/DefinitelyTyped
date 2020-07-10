@@ -84,4 +84,4 @@ export function prepareProxy(
  * Returns an object with local and remote URLs for the development server.
  * Pass this object to `createCompiler()` described above.
  */
-export function prepareUrls(protocol: string, host: string, port: number): Urls;
+export function prepareUrls(protocol: string, host: string, port: number, pathname?: string): Urls;

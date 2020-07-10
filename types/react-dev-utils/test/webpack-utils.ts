@@ -38,6 +38,11 @@ WebpackDevServerUtils.choosePort('localhost', 3000);
 // $ExpectType Urls
 const urls = WebpackDevServerUtils.prepareUrls('http', 'localhost', 3000);
 
+// Accepts pathname
+WebpackDevServerUtils.prepareUrls('http', 'localhost', 3000, '/');
+// $ExpectError
+WebpackDevServerUtils.prepareUrls('http', 'localhost', 3000, 123);
+
 // $ExpectType Compiler
 WebpackDevServerUtils.createCompiler({ webpack, config: {}, appName: 'app', urls, useYarn: true });
 
